@@ -1,0 +1,314 @@
+/* ---------------------------------------------- */
+/*            CODE EXPLAINED TUTORIALS            */
+/*         www.youtube.com/CodeExplained          */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/*                  LOAD FONTS                    */
+/* ---------------------------------------------- */
+@font-face {
+  font-family: 'Gilroy';
+  src: url(./Gilroy-Regular.woff);
+}
+
+/* ---------------------------------------------- */
+/*                    GENERAL                     */
+/* ---------------------------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Gilroy',sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: gray;
+}
+
+.hide {
+  display: none;
+}
+
+.fadeIn {
+  -webkit-animation: fade 0.5s ease-in-out;
+          animation: fade 0.5s ease-in-out;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---------------------------------------------- */
+/*                    HEADER                      */
+/* ---------------------------------------------- */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background-color: #f3f2f2;
+}
+
+/* -------- LOGO -------- */
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+.logo img {
+  width: 60px;
+}
+
+/* -------- NAV -------- */
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li:last-child {
+  padding-right: 20px;
+}
+
+/* ---------------------------------------------- */
+/*                      MAIN                      */
+/* ---------------------------------------------- */
+.main {
+  /* -------- BG IMAGE -------- */
+}
+
+.main .stats {
+  width: 100%;
+  height: 600px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url(../img/bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/bg.jpg);
+  background-size: cover;
+}
+
+/* -------- LATEST REPORT -------- */
+.latest-report {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
+  color: white;
+}
+
+.latest-report .country,
+.latest-report .total-cases,
+.latest-report .recovered,
+.latest-report .deaths {
+  height: 100px;
+}
+
+.latest-report .country .title,
+.latest-report .total-cases .title,
+.latest-report .recovered .title,
+.latest-report .deaths .title {
+  font-size: 1.3em;
+}
+
+.latest-report .country .value,
+.latest-report .total-cases .value,
+.latest-report .recovered .value,
+.latest-report .deaths .value {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.latest-report .country .new-value,
+.latest-report .total-cases .new-value,
+.latest-report .recovered .new-value,
+.latest-report .deaths .new-value {
+  font-size: 1.3em;
+}
+
+.latest-report .country .name {
+  color: blue;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.latest-report .country .change-country {
+  cursor: pointer;
+}
+
+.latest-report .total-cases .value {
+  color: gray;
+}
+
+.latest-report .recovered .value {
+  color: blue;
+}
+
+.latest-report .deaths .value {
+  color: red;
+}
+
+/* -------- CHART -------- */
+.chart {
+  width: 80%;
+  height: 70vh;
+  min-height: 500px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* -------- SEARCH COUNTRY -------- */
+.search-country {
+  position: relative;
+  top: 10px;
+}
+
+.search-country .search-box {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 400px;
+  height: 30px;
+  background-color: black;
+  z-index: 1;
+}
+
+.search-country .search-box input {
+  width: 360px;
+  height: 25px;
+  border: none;
+  padding-left: 15px;
+  background-color: transparent;
+  color: white;
+}
+
+.search-country .search-box img {
+  width: 20px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+.search-country .search-box .countrylist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  top: 30px;
+  width: 400px;
+  height: 300px;
+  background-color: black;
+  opacity: 0.5;
+  overflow-y: scroll;
+}
+
+.search-country .search-box .countrylist ul {
+  width: 100%;
+}
+
+.search-country .search-box .countrylist ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+}
+
+.search-country .search-box .countrylist ul li:hover {
+  border-left: 1px solid white;
+}
+
+/* SCROLL BAR */
+/* ---------------------------------------------- */
+/*                    FOOTER                      */
+/* ---------------------------------------------- */
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 60px;
+  background-color: #4a2a74;
+}
+
+/* ---------------------------------------------- */
+/*             SCREEN WIDTH < 600px               */
+/* ---------------------------------------------- */
+@media screen and (max-width: 600px) {
+  .latest-report {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+/*# sourceMappingURL=style.css.map */
