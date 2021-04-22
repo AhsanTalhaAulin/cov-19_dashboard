@@ -218,20 +218,30 @@ const search_input_element = document.querySelector('.search-input');
 //
 // creating country list
 
-function createCountryList {
+
+function createCountryList() {
     const num_countries = country_list.length;
 
 
     let i = 0,
         ul_list_id;
-    var num_of_ul_lists = 3;
 
+
+    var ul_list_len = Math.ceil(num_countries / num_of_ul_lists);
 
     country_list.forEach((country, index) => {
 
-        ul_list_len = Math.ceil(num_countries / num_of_ul_lists)
+        if (index % ul_list_len == 0) {
+            ul_list_id = `list-${i}`;
+            countrylist_element.innerHTML += `<ul id='${ul_list_id}'></ul>`;
+            i++;
+        }
+        document.getElementById(`${ul_list_id}`).innerHTML += `<li>${country.name}</li>`
 
-        if (index % )
+
     });
 
+
 }
+let num_of_ul_lists = 3;
+createCountryList();
