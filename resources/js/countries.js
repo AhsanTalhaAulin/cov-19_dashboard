@@ -215,7 +215,7 @@ const close_list_btn = document.querySelector('.close');
 const change_country_btn = document.querySelector('.change-country');
 const search_input_element = document.querySelector('.search-input');
 
-
+//
 // creating country list
 
 function createCountryList {
@@ -232,6 +232,6 @@ function createCountryList {
         ul_list_len = Math.ceil(num_countries / num_of_ul_lists)
 
         if (index % )
-    })
+    });
 
 }
