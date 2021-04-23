@@ -213,7 +213,7 @@ const search_country_element = document.querySelector('.search-country');
 const countrylist_element = document.querySelector('.countrylist');
 const close_list_btn = document.querySelector('.close');
 const change_country_btn = document.querySelector('.change-country');
-const search_input_element = document.querySelector('.search-input');
+const search_input_element = document.getElementById('search-input');
 
 //
 // creating country list
@@ -251,6 +251,8 @@ createCountryList();
 
 // show or hide function
 
+
+
 function elementVisible(elementBtn, effet_element) {
 
     elementBtn.addEventListener("click", () => {
@@ -260,6 +262,80 @@ function elementVisible(elementBtn, effet_element) {
     })
 
 }
-elementVisible(change_country_btn, search_country_element, );
+
+
+
+
+elementVisible(change_country_btn, search_country_element);
 elementVisible(close_list_btn, search_country_element);
 elementVisible(countrylist_element, search_country_element);
+
+change_country_btn.addEventListener("click", function() {
+    search_input_element.value = '';
+    resetCountrylist();
+})
+
+console.log('aodhfio');
+
+// country filter through search box
+// input event fires up whenever the value of the input changes
+
+search_input_element.addEventListener("input", function() {
+    let value = search_input_element.value.toUpperCase();
+
+    console.log(value);
+
+    country_list.forEach(country => {
+        if ((country.name.toUpperCase().startsWith(value)) || (country.code.startsWith(value))) {
+            document.getElementById(country.name).classList.remove('hide-class');
+        } else {
+            document.getElementById(country.name).classList.add("hide-class");
+        }
+
+
+    });
+
+    console.log(value + "end");
+
+})
+
+//reset countrylist
+
+function resetCountrylist() {
+    country_list.forEach(country => {
+        document.getElementById(country.name).classList.remove('hide-class');
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//hello
