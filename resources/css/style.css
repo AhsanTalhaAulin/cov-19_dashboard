@@ -18,7 +18,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Gilroy',sans-serif;
+  font-family: 'Gilroy', sans-serif;
 }
 
 html {
@@ -29,8 +29,12 @@ body {
   background-color: gray;
 }
 
-.hide {
-  display: none;
+.hide-class {
+  display: none !important;
+}
+
+.show-class {
+  display: block !important;
 }
 
 .fadeIn {

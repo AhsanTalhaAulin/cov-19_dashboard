@@ -236,7 +236,8 @@ function createCountryList() {
             countrylist_element.innerHTML += `<ul id='${ul_list_id}'></ul>`;
             i++;
         }
-        document.getElementById(`${ul_list_id}`).innerHTML += `<li>${country.name}</li>`
+        document.getElementById(`${ul_list_id}`).innerHTML += `
+        <li onclick="fetchData('${country.name}')" id="${country.name}">${country.name}</li>`
 
 
     });
@@ -245,3 +246,20 @@ function createCountryList() {
 }
 let num_of_ul_lists = 3;
 createCountryList();
+
+
+
+// show or hide function
+
+function elementVisible(elementBtn, effet_element) {
+
+    elementBtn.addEventListener("click", () => {
+
+        effet_element.classList.toggle('hide-class');
+        effet_element.classList.add('fadeIn');
+    })
+
+}
+elementVisible(change_country_btn, search_country_element, );
+elementVisible(close_list_btn, search_country_element);
+elementVisible(countrylist_element, search_country_element);

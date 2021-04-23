@@ -1,262 +1,247 @@
-/* ---------------------------------------------- */
-/*            CODE EXPLAINED TUTORIALS            */
-/*         www.youtube.com/CodeExplained          */
-/* ---------------------------------------------- */
+/*                  LOAD FONTS                    */
+
 
 /* ---------------------------------------------- */
-/*                  LOAD FONTS                    */
-/* ---------------------------------------------- */
+
 @font-face {
     font-family: 'Gilroy';
     src: url(./Gilroy-Regular.woff);
 }
 
+
 /* ---------------------------------------------- */
+
+
 /*                    GENERAL                     */
+
+
 /* ---------------------------------------------- */
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Gilroy',sans-serif;
+    font-family: 'Gilroy', sans-serif;
 }
-html{
+
+html {
     font-size: 16px;
 }
-body{
+
+body {
     background-color: gray;
 }
-.hide{
-    display: none;
+
+.hide-class {
+    display: none !important;
 }
-.fadeIn{
+
+.fadeIn {
     animation: fade 0.5s ease-in-out;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 @keyframes fade {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
-/* ---------------------------------------------- */
-/*                    HEADER                      */
+
 /* ---------------------------------------------- */
 
-.header{
+
+/*                    HEADER                      */
+
+
+/* ---------------------------------------------- */
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     // max-width: 1200px;
     width: 100%;
     height: 60px;
-
     // margin: 0 auto;
-
-    background-color: #f3f2f2 ;
-
+    background-color: #f3f2f2;
 }
 
+
 /* -------- LOGO -------- */
-.logo{
+
+.logo {
     display: flex;
     align-items: center;
-
     font-weight: bold;
     text-transform: uppercase;
-    
     padding-left: 20px;
-    img{
+    img {
         width: 60px;
     }
 }
 
+
 /* -------- NAV -------- */
 
-
-nav{
-    ul{
+nav {
+    ul {
         display: flex;
         align-items: center;
-        li{
+        li {
             list-style: none;
-            a{
+            a {
                 text-decoration: none;
                 padding: 10px;
             }
         }
-        li:last-child{
+        li:last-child {
             padding-right: 20px;
         }
     }
 }
+
+
 /* ---------------------------------------------- */
+
+
 /*                      MAIN                      */
+
+
 /* ---------------------------------------------- */
 
-.main{
-
+.main {
     /* -------- BG IMAGE -------- */
-    .stats{
+    .stats {
         width: 100%;
         height: 600px;
-        background-image:linear-gradient(rgba(0, 0, 0,0.9), 
-                                        rgba(0, 0, 0, 0.9)),
-                        url(../img/bg.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/bg.jpg);
         background-size: cover;
     }
-
 }
 
 
-
 /* -------- LATEST REPORT -------- */
-.latest-report{
+
+.latest-report {
     display: flex;
     justify-content: space-between;
-
     width: 80%;
     margin: 0 auto;
     padding-top: 50px;
-
     color: white;
-
     .country,
     .total-cases,
     .recovered,
-    .deaths{
+    .deaths {
         height: 100px;
-
-        .title{
+        .title {
             font-size: 1.3em;
         }
-        .value,{
+        .value,
+        {
             font-size: 2em;
             font-weight: bold;
         }
-        .new-value{
+        .new-value {
             font-size: 1.3em;
         }
     }
-
-    .country{
-        .name{
+    .country {
+        .name {
             color: blue;
             font-size: 2.2em;
             font-weight: bold;
         }
-        .change-country{
+        .change-country {
             cursor: pointer;
         }
     }
-
-    .total-cases{
-        .value{
+    .total-cases {
+        .value {
             color: gray;
         }
     }
-    .recovered{
-        .value{
+    .recovered {
+        .value {
             color: blue;
         }
     }
-    .deaths{
-        .value{
+    .deaths {
+        .value {
             color: red;
         }
     }
-    
-
-
-
 }
 
 
-
 /* -------- CHART -------- */
-.chart{
+
+.chart {
     width: 80%;
     height: 70vh;
     min-height: 500px;
-
     margin: 0 auto;
     padding: 50px 0;
 }
 
+
 /* -------- SEARCH COUNTRY -------- */
 
-.search-country{
+.search-country {
     position: relative;
     top: 10px;
-    .search-box{
+    .search-box {
         position: absolute;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         width: 400px;
         height: 30px;
-
         background-color: black;
         z-index: 1;
-
-        input{
+        input {
             width: 360px;
             height: 25px;
             border: none;
-
             padding-left: 15px;
-
             background-color: transparent;
             color: white;
         }
-        img{
+        img {
             width: 20px;
             padding-right: 5px;
             cursor: pointer;
         }
-        
-
-        .countrylist{
-
+        .countrylist {
             display: flex;
             justify-content: space-around;
-
-
             position: absolute;
             top: 30px;
-
             width: 400px;
             height: 300px;
-
             background-color: black;
-            opacity:0.5 ;
-
+            opacity: 0.5;
             overflow-y: scroll;
-
-            ul{
+            ul {
                 width: 100%;
-
-                li{
+                li {
                     list-style: none;
                     cursor: pointer;
                     padding: 10px;
                     color: white;
                 }
-                li:hover{
+                li:hover {
                     border-left: 1px solid white;
                 }
             }
-
-
         }
     }
 }
@@ -264,31 +249,37 @@ nav{
 
 /* SCROLL BAR */
 
+
 /* ---------------------------------------------- */
+
+
 /*                    FOOTER                      */
+
+
 /* ---------------------------------------------- */
-.footer{
+
+.footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-
     width: 100%;
     height: 60px;
-
-
-    background-color: #4a2a74 ;
+    background-color: #4a2a74;
 }
 
+
 /* ---------------------------------------------- */
+
+
 /*             SCREEN WIDTH < 600px               */
+
+
 /* ---------------------------------------------- */
 
 @media screen and (max-width:600px) {
-
-    .latest-report{
+    .latest-report {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
-    
 }
